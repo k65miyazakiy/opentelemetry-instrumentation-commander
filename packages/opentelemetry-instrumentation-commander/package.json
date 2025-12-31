@@ -1,0 +1,49 @@
+{
+  "name": "opentelemetry-instrumentation-commander",
+  "version": "0.1.0",
+  "description": "OpenTelemetry automatic instrumentation for Commander.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha",
+    "test:watch": "mocha --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "opentelemetry",
+    "instrumentation",
+    "commander",
+    "cli",
+    "tracing"
+  ],
+  "author": "k65miyazakiy",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@opentelemetry/context-async-hooks": "^2.2.0",
+    "@opentelemetry/sdk-trace-base": "^1.19.0",
+    "@opentelemetry/sdk-trace-node": "^1.19.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.10.0",
+    "commander": "^14.0.2",
+    "mocha": "^11.7.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.7.0",
+    "@opentelemetry/instrumentation": "^0.208.0",
+    "@opentelemetry/semantic-conventions": "^1.19.0"
+  },
+  "peerDependencies": {
+    "commander": ">=2.0.0 <15"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
