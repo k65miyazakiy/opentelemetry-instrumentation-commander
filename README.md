@@ -8,7 +8,8 @@ A monorepo containing OpenTelemetry automatic instrumentation for Commander.js C
 .
 ├── packages/
 │   ├── opentelemetry-instrumentation-commander/  # Core instrumentation package (publishable)
-│   └── example-cli/                              # Example CLI application (private)
+│   ├── example-cli/                              # Example CLI application - CommonJS (private)
+│   └── example-cli-esm/                          # Example CLI application - ESM (private)
 └── package.json                                  # Root workspace configuration
 ```
 
