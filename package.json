@@ -9,7 +9,9 @@
   "scripts": {
     "build": "npm run build -w packages/opentelemetry-instrumentation-commander && npm run build -w packages/example-cli",
     "test": "npm run test -w packages/opentelemetry-instrumentation-commander",
-    "clean": "rm -rf packages/*/dist packages/*/node_modules node_modules"
+    "clean": "rm -rf packages/*/dist packages/*/node_modules node_modules",
+    "pack:instrumentation": "npm pack -w packages/opentelemetry-instrumentation-commander",
+    "publish:instrumentation": "npm publish -w packages/opentelemetry-instrumentation-commander --access public"
   },
   "keywords": [
     "opentelemetry",

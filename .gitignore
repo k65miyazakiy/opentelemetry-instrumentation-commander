@@ -28,3 +28,8 @@ coverage/
 # OS
 .DS_Store
 Thumbs.db
+
+# packed files
+*.zip
+*.tar.gz
+*.tgz
