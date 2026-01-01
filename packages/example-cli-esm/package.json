@@ -1,0 +1,30 @@
+{
+  "name": "example-cli-esm",
+  "version": "0.1.0",
+  "description": "Example ESM CLI application demonstrating opentelemetry-instrumentation-commander",
+  "private": true,
+  "type": "module",
+  "main": "dist/cli-app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --experimental-loader=@opentelemetry/instrumentation/hook.mjs --import ./dist/tracing-cli.js dist/cli-app.js",
+    "clean": "rm -rf dist"
+  },
+  "author": "k65miyazakiy",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.7.0",
+    "@opentelemetry/context-async-hooks": "^2.2.0",
+    "@opentelemetry/exporter-trace-otlp-proto": "^0.46.0",
+    "@opentelemetry/instrumentation": "^0.208.0",
+    "@opentelemetry/resources": "^1.19.0",
+    "@opentelemetry/sdk-trace-node": "^1.19.0",
+    "@opentelemetry/semantic-conventions": "^1.19.0",
+    "commander": "^14.0.2",
+    "opentelemetry-instrumentation-commander": "*"
+  }
+}

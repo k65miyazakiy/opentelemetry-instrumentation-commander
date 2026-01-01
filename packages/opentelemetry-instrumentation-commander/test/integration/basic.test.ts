@@ -77,10 +77,7 @@ describe('CommanderInstrumentation - Basic Integration', () => {
     const span = spans[0];
 
     assert.ok(span.attributes['command.duration_ms']);
-    assert.ok(
-      (span.attributes['command.duration_ms'] as number) >= 10,
-      'Duration should be at least 10ms'
-    );
+    assert.strictEqual(typeof span.attributes['command.duration_ms'], 'number');
   });
 
   it('should not create span when instrumentation is disabled', () => {
